@@ -1,5 +1,9 @@
+##### EditorConfig (editorconfig.org)
+
 root = true
+
 [*]
+charset = utf-8
 indent_style = space
 indent_size = 4
 insert_final_newline = false

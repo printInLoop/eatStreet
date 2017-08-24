@@ -1,6 +1,19 @@
-var bodyParser = require( 'body-parser' );
-var express = require( 'express' );
+/**/
 
-var app = express();
 
-app.use(bodyParser.json());
+
+
+const bodyParser = require( 'body-parser' );
+const express = require( 'express' );
+
+global.app = express();
+app.config = require( './config/server.config' );
+app.use( bodyParser.json() );
+
+app.use( '/build', express.static( `${ __dirname }/build` ) );
+
+app.get( '/', ( req, res ) => {
+    res.sendfile( 'app/views/index.html' );
+});
+
+app.listen( app.config.port );

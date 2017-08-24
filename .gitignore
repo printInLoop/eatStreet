@@ -1,1 +1,15 @@
-node_modules
+##### Directories
+build/
+node_modules/
+
+
+
+
+##### Files
+
+# OS related
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db

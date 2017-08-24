@@ -1,8 +1,43 @@
 {
-	"name": "eatStreet",
-	"dependencies": {
-		"body-parser": "^1.17.1",
-		"express": "^4.15.2",
-		"mongoose": "^4.9.8"
-	}
+    "name": "eatStreet",
+    "version": "0.0.0",
+    "contributors": [
+        {
+            "name": "Roshan Saru Magar",
+            "url": "https://github.com/printInLoop"
+        },
+        {
+            "name": "Adam Gian",
+            "email": "contact@adamgian.me",
+            "url": "adamgian.me"
+        }
+    ],
+    "license": "ISC",
+    "private": true,
+    "main": "server.js",
+    "scripts": {
+        "clean": "rimraf build/",
+        "start": "npm run dev",
+        "dev": "npm run clean && concurrently 'npm run serve:webpack' 'cross-env NODE_ENV=development nodemon --debug'",
+        "serve:webpack": "webpack --config config/webpack.config.js --watch"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "bootstrap": "^4.0.0-beta",
+        "express": "^4.15.2",
+        "mongoose": "^4.11.7",
+        "uglify": "^0.1.5",
+        "vue": "^2.4.2",
+        "vue-router": "^2.7.0"
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.0",
+        "cross-env": "^5.0.5",
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-nodemon": "^2.2.1",
+        "gulp-uglify": "^3.0.0",
+        "rimraf": "^2.6.1",
+        "webpack": "^3.5.5"
+    }
 }

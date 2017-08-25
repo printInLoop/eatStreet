@@ -1,6 +1,7 @@
 const autoprefixer = require( 'autoprefixer' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const UglifyJSPlugin = require( 'uglifyjs-webpack-plugin' );
+const webpack = require( 'webpack' );
 
 
 
@@ -31,11 +32,6 @@ module.exports = {
                         },
                         {
                             loader: 'sass-loader',
-                            options: {
-                                includePaths: [
-                                    './node_modules/bootstrap/scss',
-                                ],
-                            }
                         }
                     ]
                 }),
@@ -53,6 +49,12 @@ module.exports = {
             compress: {
                 warnings: false,
             },
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Tether: 'tether'
         }),
     ],
 

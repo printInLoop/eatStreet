@@ -25,7 +25,9 @@
         "body-parser": "^1.17.1",
         "bootstrap": "^4.0.0-beta",
         "express": "^4.15.2",
+        "jquery": "^3.2.1",
         "mongoose": "^4.11.7",
+        "popper.js": "^1.12.3",
         "uglify": "^0.1.5",
         "vue": "^2.4.2",
         "vue-router": "^2.7.0"
@@ -48,5 +50,7 @@
         "uglifyjs-webpack-plugin": "^0.4.6",
         "webpack": "^3.5.5"
     },
-    "browserslist": ["last 2 versions"]
+    "browserslist": [
+        "last 2 versions"
+    ]
 }

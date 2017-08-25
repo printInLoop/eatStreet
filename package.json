@@ -14,7 +14,7 @@
     ],
     "license": "ISC",
     "private": true,
-    "main": "server.js",
+    "main": "app/server.js",
     "scripts": {
         "clean": "rimraf build/",
         "start": "npm run dev",

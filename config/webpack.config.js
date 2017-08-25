@@ -7,7 +7,7 @@ const webpack = require( 'webpack' );
 
 
 module.exports = {
-    entry: './app/main.js',
+    entry: './app/client.js',
     output: {
         filename: './build/app.min.js',
     },
@@ -18,6 +18,15 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
+                enforce: 'pre'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: [ 'es2015' ]
+                }
             },
             {
                 test: /\.scss$/,
@@ -28,10 +37,10 @@ module.exports = {
                             options: { minimize: true },
                         },
                         {
-                            loader: 'postcss-loader',
+                            loader: 'postcss-loader'
                         },
                         {
-                            loader: 'sass-loader',
+                            loader: 'sass-loader'
                         }
                     ]
                 }),
@@ -43,18 +52,18 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             allChunks: true,
-            filename: 'build/app.min.css',
+            filename: 'build/app.min.css'
         }),
         new UglifyJSPlugin({
             compress: {
-                warnings: false,
+                warnings: false
             },
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            Tether: 'tether'
+            Popper: ['popper.js', 'default'],
+            'window.jQuery': 'jquery'
         }),
     ],
 

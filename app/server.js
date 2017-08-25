@@ -16,7 +16,7 @@ app.use( bodyParser.json() );
 
 // Build directory
 // Serve static assets from this directory.
-app.use( '/build', express.static( `${ __dirname }/build` ) );
+app.use( '/assets', express.static( app.config.path.build ) );
 
 app.get( '/', ( req, res ) => {
     res.sendfile( 'app/template/index.html' );

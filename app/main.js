@@ -4,4 +4,4 @@ import VueRouter from 'vue-router';
 Vue.use( VueRouter );
 
 // Import stylesheet
-// import './app/assets/styles/main.scss';
+import './styles/main.scss';

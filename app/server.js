@@ -19,7 +19,7 @@ app.use( bodyParser.json() );
 app.use( '/assets', express.static( app.config.path.build ) );
 
 app.get( '/', ( req, res ) => {
-    res.sendfile( 'app/template/index.html' );
+    res.sendFile( `${ app.config.path.root }/app/template/index.html` );
 });
 
 app.listen( app.config.port, () => {

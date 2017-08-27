@@ -4,16 +4,22 @@
 
 #### Server-side
 
-* Node.js
-* Express
-* MongoDB (with Mongoose)
+* **Node.js**
+* **Express**
+* **MongoDB (with Mongoose)**
 
 #### Client-side
 
 * HTML5, CSS (SCSS) and JS (ES2015)
-* Vue.js
-* Webpack 3
+* **Vue.js**
 * Bootstrap 4
+
+#### Development
+
+* Webpack 3
+* NPM
+* ESLint
+* Mocha
 
 
 

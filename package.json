@@ -19,7 +19,7 @@
         "clean": "rimraf build/",
         "start": "npm run dev",
         "dev": "npm run clean && concurrently 'npm run serve:webpack' 'cross-env NODE_ENV=development nodemon --debug'",
-        "serve:webpack": "webpack --config config/webpack.config.js --watch"
+        "serve:webpack": "webpack --config config/webpack-dev.config.js --watch"
     },
     "dependencies": {
         "body-parser": "^1.17.1",

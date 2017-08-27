@@ -10,25 +10,26 @@ import './styles/main.scss';
 // Import Vue components
 import Body from './template/Body.vue';
 import Dashboard from './pages/dashboard/Dashboard.vue';
-import Product from './pages/product/Product.vue';
+import ProductList from './pages/product/ProductList.vue';
+import ProductDetail from './pages/product/ProductDetail.vue';
 
 
 // Define routes
 Vue.use( VueRouter );
 
 const router = new VueRouter({
+    linkActiveClass: 'is-active',
+    mode: 'history',
     routes: [
         { path: '/', component: Dashboard },
-        { path: '/products', component: Product }
-    ],
-    mode: 'history',
-    linkActiveClass: 'is-active'
+        { path: '/products', component: ProductList }
+    ]
 })
 
 
 // Mount Vue
 new Vue({
     el: '#app',
-    router,
-    render: h => h( Body )
+    render: h => h( Body ),
+    router: router
 })

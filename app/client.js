@@ -18,11 +18,12 @@ import ProductDetail from './pages/product/ProductDetail.vue';
 Vue.use( VueRouter );
 
 const router = new VueRouter({
-    linkActiveClass: 'is-active',
+    linkActiveClass: 'active',
     mode: 'history',
     routes: [
         { path: '/', component: Dashboard },
-        { path: '/products', component: ProductList }
+        { path: '/products', component: ProductList },
+        { path: '/product/:id', component: ProductDetail }
     ]
 })
 

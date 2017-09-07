@@ -27,10 +27,11 @@
 ### Setup
 
 ```
+# Install project dependencies
 npm i
 ```
 
 ```
-// Start development server
+# Start development server
 npm start
 ```

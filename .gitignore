@@ -7,6 +7,9 @@ node_modules/
 
 ##### Files
 
+npm-debug.log
+
+
 # OS related
 .DS_Store
 ._*
